@@ -2,9 +2,9 @@ import { useState } from "react";
 const CustomForm = () => {
   const defaultValue = 0;
   const [randomvalue, setRandomvalue] = useState(defaultValue);
-  console.log(randomvalue);
   const handleInput = () => {
     console.log("This is value from setRandomValue: ", randomvalue);
+    helper.getValue(randomvalue);
   };
 
   return (
