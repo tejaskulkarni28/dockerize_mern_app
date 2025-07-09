@@ -1,12 +1,13 @@
 import { useState } from "react";
+import user from "../services/user";
 const CustomForm = () => {
   const defaultValue = 0;
   const [randomvalue, setRandomvalue] = useState(defaultValue);
   const handleInput = () => {
-    console.log("This is value from setRandomValue: ", randomvalue);
-    helper.getValue(randomvalue);
+    const id = randomvalue;
+    user.sendText({ id: id });
+    console.log("HandleInput got triggered", id);
   };
-
   return (
     <>
       <label>Enter any random number</label>
