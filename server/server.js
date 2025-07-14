@@ -1,6 +1,9 @@
 const express = require("express");
 const app = express();
 const cors = require("cors");
+const connectDB = require("./config/config");
+
+connectDB();
 
 app.use(cors());
 app.use(express.json()); // For parsing application/json
