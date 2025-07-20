@@ -4,7 +4,7 @@ const User = {
   async handleInputs(req, res, next) {
     const { id } = req.body;
 
-    (await userModel.insertOne(id)).save();
+    await userModel.create({ message: id });
 
     console.log("Function triggered");
     console.log("ID: ", id);

@@ -6,7 +6,7 @@ router.post("/sendtext", handleText);
 module.exports = router;
 
 function handleText(req, res, next) {
-  console.log("HandleText controller triggered");
+  console.log("HandleText controller triggered!!");
   user
     .handleInputs(req, res, next)
     .then((ok) =>

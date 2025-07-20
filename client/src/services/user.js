@@ -2,7 +2,7 @@ import axios from "axios";
 const user = {
   async sendText({ id }) {
     try {
-      await axios.post("http://localhost:3001/user/sendtext", { id });
+      await axios.post("http://localhost:32/user/sendtext", { id });
     } catch (error) {
       console.log("API error: ", error);
     }
